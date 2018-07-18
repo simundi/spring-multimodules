@@ -27,13 +27,20 @@ The Module Dependencies should
 
 I normally use some conventions in my modules.
 
-1. packages are '<group name>.<app name>.<module name>' 
+1. packages are `<group name>.<app name>.<module name>` 
    * Examples: 
       * com.simundi.multimodules.**server**
       * com.simundi.multimodules.**repositories**
+      
 2. Each module has it's own Configuration class. This class is responsible for bootstraping the module itself.
    * Examples: 
       * com.simundi.multimodules.api.config.ApiModuleConfig
       * com.simundi.multimodules.repositories.config.RepositoryModuleConfig      
-     
-     
+ 
+      ```$java     
+      @Configuration
+      @ComponentScan("com.simundi.multimodules.api")
+      @Import({BusinessModuleConfig.class})
+      public class ApiModuleConfig {
+      }  
+      ```   
