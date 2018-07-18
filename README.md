@@ -11,13 +11,15 @@ So, here it goes.
 
 I've separated my app in 4 layers:
 
-* sm-server: that's the actual Spring Boot App. This module is responsible for generating a deployable artifact.
-* sm-api: has the contract of the service. Basically RestControllers all over it.
-* sm-business: it's the business log Facade. I like to have it separated when I'll expose the logic trough different interfaces (e.g Rest, Messaging, CLI, etc.)
-* sm-repositories: Data Access Layer. Easy. 
+* **sm-server:** that's the actual Spring Boot App. This module is responsible for generating a deployable artifact.
+* **sm-api:** has the contract of the service. Basically RestControllers all over it.
+* **sm-business:** it's the business log Facade. I like to have it separated when I'll expose the logic trough different interfaces (e.g Rest, Messaging, CLI, etc.)
+* **sm-repositories:** Data Access Layer. Easy. 
 
+They are just references. I know everyone has it's own option about how to organize modules inside of an service. 
+I'm focusing more about the technicality of how to achieve that, more than which layers you should have.  
 
-
+The Module Dependencies should 
 ![Modules](https://github.com/simundi/spring-multimodules/blob/master/imgs/modules.png)
 
 
@@ -25,7 +27,7 @@ I've separated my app in 4 layers:
 
 I normally use some conventions in my modules.
 
-1. packages are <group name>.<>.<module name>. 
+1. packages are '<group name>.<app name>.<module name>' 
    * Examples: 
       * com.simundi.multimodules.**server**
       * com.simundi.multimodules.**repositories**
