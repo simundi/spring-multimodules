@@ -17,6 +17,10 @@ I've separated my app in 4 layers:
 * sm-repositories: Data Access Layer. Easy. 
 
 
+
+![Modules](https://github.com/simundi/spring-multimodules/blob/master/imgs/modules.png)
+
+
 # Modules Conventions
 
 I normally use some conventions in my modules.
