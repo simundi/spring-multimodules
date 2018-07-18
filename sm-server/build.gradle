@@ -1,0 +1,23 @@
+buildscript {
+    ext {
+        extspringBootVersion = '2.0.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${spring_boot_version}")
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+
+dependencies {
+
+    compile project(':sm-api')
+
+    compile('org.springframework.boot:spring-boot-starter')
+    compile("org.springframework.boot:spring-boot-actuator")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}

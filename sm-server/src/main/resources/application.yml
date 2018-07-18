@@ -1,0 +1,4 @@
+#Exposing Endpoints for Local development
+management:
+   security:
+     enabled: false

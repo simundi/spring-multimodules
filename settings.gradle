@@ -1,0 +1,6 @@
+rootProject.name = 'spring-multimodules'
+include 'sm-server'
+include 'sm-api'
+include 'sm-repositories'
+include 'sm-business'
+
